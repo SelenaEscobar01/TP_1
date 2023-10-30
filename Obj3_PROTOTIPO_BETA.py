@@ -15,7 +15,7 @@ def ventana_principal():
     miFrame = Frame(raiz,width=430, height=200,bg="grey")
     miFrame.pack()
     
-    Label(miFrame, bg="grey", text = ("Construido por:\n Gustavo Alfredo Maita\n Agostina\n Sele\n Guido\n")).place(x=140, y=95)
+    Label(miFrame, bg="grey", text = ("Construido por:\n Gustavo Alfredo Maita\n Agostina Armando\n Selena Escobar\n Guido Tiscornia\n")).place(x=140, y=95)
     Label(miFrame, text = ("Bienvenido a la aplicación de mensajes secretos del grupo PROTOTIPO.\n Para continuar presione continuar, de lo contrario cierre la ventana")).place(x=20,y=20)
     
     botonContinuar =Button(raiz,text="Continuar", command= lambda: ventana_continuar())
