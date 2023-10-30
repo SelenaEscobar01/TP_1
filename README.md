@@ -1,6 +1,6 @@
 Grupo: PROTOTIPO
 Integrantes: Gustavo Alfredo Maita
-             Selena
+             Selena Escobar
              Agostina
              Guido
 
