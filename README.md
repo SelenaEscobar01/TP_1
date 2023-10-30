@@ -1,1 +1,8 @@
-# TP_1
+Grupo: PROTOTIPO
+Integrantes: Gustavo Alfredo Maita
+             Selena
+             Agostina
+             Guido
+
+
+
