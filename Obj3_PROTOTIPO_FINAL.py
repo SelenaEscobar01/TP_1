@@ -31,6 +31,8 @@ def ventana_continuar():
     
 
     raiz = Tk()
+    raiz.iconbitmap("uba.ico")
+    raiz.title("TP Grupal Parte 1 - Grupo: PROTOTIPO")
     miFrame = Frame(raiz,width=430, height=150)
 
     miFrame.pack()
@@ -105,28 +107,31 @@ def cifrado_atbash(cuadroUsuario):
     lista_1 = list(mensaje.lower())
     cifrado = []
     i = 0
-    for i in range(len(lista_1)): 
-        l= lista_1[i]
-        i +=1
-        if l.isnumeric():            
-            numero = 9 - int(l)
-            cifrado += str(numero)            
-        else: 
-            numero = ord(l)
-            valor = 122 - (numero-65)
-            cifrado += chr(valor)
-    if '\x9b' in cifrado:  
-        s = cifrado.index('\x9b')
-        cifrado[s]= " "
+    if not texto or not clave: 
+        messagebox.showwarning("", "Debe ingresar un mensaje y una clave")
     else:
-        cifrado
+        for i in range(len(lista_1)): 
+            l= lista_1[i]
+            i +=1
+            if l.isnumeric():            
+                numero = 9 - int(l)
+                cifrado += str(numero)            
+            else: 
+                numero = ord(l)
+                valor = 122 - (numero-65)
+                cifrado += chr(valor)
+        if '\x9b' in cifrado:
+            s = cifrado.index('\x9b')
+            cifrado[s]= " "
+        else:
+            cifrado
         
-    cifrado = "".join(cifrado)
-    if texto.isupper():   
-        Str = cifrado.lower()
-    else:
-        Str = cifrado
-    Str = mostrar_texto(Str, texto)
+        cifrado = "".join(cifrado)
+        if texto.isupper():   
+            Str = cifrado.lower()
+        else:
+            Str = cifrado
+        Str = mostrar_texto(Str, texto)
     
     return Str
 
